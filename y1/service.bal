@@ -1,5 +1,8 @@
 import ballerina/http;
 
+#
+# this is the sample
+
 # A service representing a network-accessible API
 # bound to port `9090`.
 @display {
