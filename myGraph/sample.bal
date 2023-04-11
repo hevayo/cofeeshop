@@ -17,18 +17,18 @@ service / on new graphql:Listener(8090) {
     #
     # + name - the input string name
     # + return - string name with greeting message or error
-    resource function get greeting(string name) returns string|error {
+    resource function get sample(string name) returns string|error {
         if name is "" {
             return error("name should not be empty!");
         }
         return "Hello, " + name;
     }
 
-    resource function get sample() returns MyService {
+    resource function get sample1() returns MyService {
 
     }
 
-    resource function get persons() returns Person {
+    resource function get persons(Test name) returns Person {
 
     }
 }
@@ -38,3 +38,6 @@ service class MyService {
 
 service class Person {
 }
+
+type Test record {
+};
